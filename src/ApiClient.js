@@ -586,7 +586,7 @@ class ApiClient {
         return [
             {
               'url': "https://83.212.100.226:5001/v1",
-              'description': "wabli-community-51",
+              'description': "wabli-community-52201",
             }
       ];
     }
