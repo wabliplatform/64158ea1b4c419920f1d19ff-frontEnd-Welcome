@@ -1,6 +1,6 @@
 # TempApi.WelcomeentityApi
 
-All URIs are relative to *https://83.212.100.226:4003/v1*
+All URIs are relative to *https://83.212.100.226:4004/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
