@@ -13,8 +13,8 @@
 
 
 import ApiClient from './ApiClient';
-import Welcomeentity from './model/Welcomeentity';
-import WelcomeentityApi from './api/WelcomeentityApi';
+import User from './model/User';
+import UserApi from './api/UserApi';
 
 
 /**
@@ -56,16 +56,16 @@ export {
     ApiClient,
 
     /**
-     * The Welcomeentity model constructor.
-     * @property {module:model/Welcomeentity}
+     * The User model constructor.
+     * @property {module:model/User}
      */
-    Welcomeentity,
+    User,
 
     /**
-    * The WelcomeentityApi service constructor.
-    * @property {module:api/WelcomeentityApi}
+    * The UserApi service constructor.
+    * @property {module:api/UserApi}
     */
-    WelcomeentityApi
+    UserApi
 };
 
 export default {
@@ -76,14 +76,14 @@ export default {
     ApiClient,
 
     /**
-     * The Welcomeentity model constructor.
-     * @property {module:model/Welcomeentity}
+     * The User model constructor.
+     * @property {module:model/User}
      */
-    Welcomeentity,
+    User,
 
     /**
-    * The WelcomeentityApi service constructor.
-    * @property {module:api/WelcomeentityApi}
+    * The UserApi service constructor.
+    * @property {module:api/UserApi}
     */
-    WelcomeentityApi
+    UserApi
 };

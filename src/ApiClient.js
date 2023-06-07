@@ -32,9 +32,9 @@ class ApiClient {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default https://83.212.100.226:4004/v1
+         * @default http://localhost:8090/v1
          */
-        this.basePath = 'https://83.212.100.226:4004/v1'.replace(/\/+$/, '');
+        this.basePath = 'http://localhost:8090/v1'.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.
@@ -585,8 +585,8 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "https://83.212.100.226:4004/v1",
-              'description': "wabli-bme-4",
+              'url': "http://localhost:8090/v1",
+              'description': "local-host",
             }
       ];
     }

@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-	'Welcome' : './javascript/Welcome.js',
+	'Page1' : './javascript/Page1.js',
 },
   output: {
     path: path.resolve(__dirname, 'dist'),
