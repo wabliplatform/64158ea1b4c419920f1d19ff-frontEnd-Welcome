@@ -1,0 +1,3 @@
+let apiUserApi = new TempApi.UserApi();import TempApi from '../src/index';let user = new TempApi.User();document.getElementById('i59cv').onclick = (event) => {
+    event.preventDefault();
+    user['firstName'] = document.querySelector("[annotationname = 'firstName']").value;apiUserApi.createuser( user, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); {   location.href= '/Page1/'+response.body.query._id+'' ;}}});};window.onload = () => {};
