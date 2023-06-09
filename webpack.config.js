@@ -4,6 +4,7 @@ module.exports = {
   entry: {
 	'Page1' : './javascript/Page1.js',
 	'addPatient' : './javascript/addPatient.js',
+	'Login' : './javascript/Login.js',
 },
   output: {
     path: path.resolve(__dirname, 'dist'),
