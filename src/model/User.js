@@ -22,11 +22,11 @@ class User {
     /**
      * Constructs a new <code>User</code>.
      * @alias module:model/User
-     * @param firstName {String} 
+     * @param userName {String} 
      */
-    constructor(firstName) { 
+    constructor(userName) { 
         
-        User.initialize(this, firstName);
+        User.initialize(this, userName);
     }
 
     /**
@@ -34,8 +34,8 @@ class User {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName) { 
-        obj['firstName'] = firstName;
+    static initialize(obj, userName) { 
+        obj['userName'] = userName;
     }
 
     /**
@@ -52,8 +52,8 @@ class User {
             if (data.hasOwnProperty('_id')) {
                 obj['_id'] = ApiClient.convertToType(data['_id'], 'String');
             }
-            if (data.hasOwnProperty('firstName')) {
-                obj['firstName'] = ApiClient.convertToType(data['firstName'], 'String');
+            if (data.hasOwnProperty('userName')) {
+                obj['userName'] = ApiClient.convertToType(data['userName'], 'String');
             }
         }
         return obj;
@@ -68,9 +68,9 @@ class User {
 User.prototype['_id'] = undefined;
 
 /**
- * @member {String} firstName
+ * @member {String} userName
  */
-User.prototype['firstName'] = undefined;
+User.prototype['userName'] = undefined;
 
 
 
