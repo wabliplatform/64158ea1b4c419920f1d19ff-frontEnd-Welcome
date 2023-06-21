@@ -1,4 +1,23 @@
-let apiUserApi = new TempApi.UserApi();import TempApi from '../src/index';window.onload = () => {let userId = window.location.pathname.replace('/userInfo/','');apiUserApi.getuser( userId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { document.querySelector('[annotationname = userName]').textContent = response.body.query.userName; } catch (e) { console.log(e) };try { 
+let apiUserApi = new TempApi.UserApi();import TempApi from '../src/index';document.getElementById('ip876k').onclick = (event) => {
+    event.preventDefault();
+    let userId = window.location.pathname.replace('/userInfo/','');
+      if(userId === '/userInfo' || userId === ''){
+        let parentId = "";
+        const storedData = window.localStorage.getItem('data');
+        const newMap = new Map(JSON.parse(storedData));
+        newMap.forEach((value, key) => {
+          if (
+            document
+              .getElementById(key)
+              .contains(document.getElementById("ip876k")) === true &&
+              document.getElementById(key).contains(document.getElementById(parentId)) === false
+          ) {
+            userId = value._id;
+            parentId = key;
+          }
+        });
+      }
+    apiUserApi.deleteuser( userId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{   location.href= '/Home' ;}}});};window.onload = () => {let userId = window.location.pathname.replace('/userInfo/','');apiUserApi.getuser( userId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { document.querySelector('[annotationname = userName]').textContent = response.body.query.userName; } catch (e) { console.log(e) };try { 
       if(response.body.query.userImage !== undefined){
         if(document.querySelector('[annotationname = userImage]').getAttribute('type') === 'file'){
           document.querySelector('[annotationname = userImage]').setAttribute('data-image-base64',response.body.query.userImage.data);

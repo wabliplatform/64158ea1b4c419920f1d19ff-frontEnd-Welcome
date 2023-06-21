@@ -2,6 +2,8 @@ let apiUserApi = new TempApi.UserApi();import TempApi from '../src/index';docume
     event.preventDefault();
     {   location.href= '/addPatient' ;}};document.getElementById('ibdfwg').onclick = (event) => {
     event.preventDefault();
+    {   location.href= '/userInfo' ;}};document.getElementById('ih9qph').onclick = (event) => {
+    event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
       let parentId = "";
@@ -12,7 +14,7 @@ let apiUserApi = new TempApi.UserApi();import TempApi from '../src/index';docume
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("ibdfwg")) === true &&
+            .contains(document.getElementById("ih9qph")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
