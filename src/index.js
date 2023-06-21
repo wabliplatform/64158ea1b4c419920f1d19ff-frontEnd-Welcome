@@ -14,6 +14,7 @@
 
 import ApiClient from './ApiClient';
 import User from './model/User';
+import UserUserImage from './model/UserUserImage';
 import UserApi from './api/UserApi';
 
 
@@ -62,6 +63,12 @@ export {
     User,
 
     /**
+     * The UserUserImage model constructor.
+     * @property {module:model/UserUserImage}
+     */
+    UserUserImage,
+
+    /**
     * The UserApi service constructor.
     * @property {module:api/UserApi}
     */
@@ -80,6 +87,12 @@ export default {
      * @property {module:model/User}
      */
     User,
+
+    /**
+     * The UserUserImage model constructor.
+     * @property {module:model/UserUserImage}
+     */
+    UserUserImage,
 
     /**
     * The UserApi service constructor.

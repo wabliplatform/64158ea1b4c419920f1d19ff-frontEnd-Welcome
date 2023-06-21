@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new TempApi.User();
+    instance = new TempApi.UserUserImage();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,22 @@
       object[property] = value;
   }
 
-  describe('User', function() {
-    it('should create an instance of User', function() {
-      // uncomment below and update the code to test User
-      //var instane = new TempApi.User();
-      //expect(instance).to.be.a(TempApi.User);
+  describe('UserUserImage', function() {
+    it('should create an instance of UserUserImage', function() {
+      // uncomment below and update the code to test UserUserImage
+      //var instane = new TempApi.UserUserImage();
+      //expect(instance).to.be.a(TempApi.UserUserImage);
     });
 
-    it('should have the property id (base name: "_id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new TempApi.User();
+    it('should have the property data (base name: "data")', function() {
+      // uncomment below and update the code to test the property data
+      //var instance = new TempApi.UserUserImage();
       //expect(instance).to.be();
     });
 
-    it('should have the property userName (base name: "userName")', function() {
-      // uncomment below and update the code to test the property userName
-      //var instance = new TempApi.User();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property userImage (base name: "userImage")', function() {
-      // uncomment below and update the code to test the property userImage
-      //var instance = new TempApi.User();
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new TempApi.UserUserImage();
       //expect(instance).to.be();
     });
 

@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import UserUserImage from './UserUserImage';
 
 /**
  * The User model module.
@@ -23,10 +24,11 @@ class User {
      * Constructs a new <code>User</code>.
      * @alias module:model/User
      * @param userName {String} 
+     * @param userImage {module:model/UserUserImage} 
      */
-    constructor(userName) { 
+    constructor(userName, userImage) { 
         
-        User.initialize(this, userName);
+        User.initialize(this, userName, userImage);
     }
 
     /**
@@ -34,8 +36,9 @@ class User {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, userName) { 
+    static initialize(obj, userName, userImage) { 
         obj['userName'] = userName;
+        obj['userImage'] = userImage;
     }
 
     /**
@@ -55,6 +58,9 @@ class User {
             if (data.hasOwnProperty('userName')) {
                 obj['userName'] = ApiClient.convertToType(data['userName'], 'String');
             }
+            if (data.hasOwnProperty('userImage')) {
+                obj['userImage'] = UserUserImage.constructFromObject(data['userImage']);
+            }
         }
         return obj;
     }
@@ -71,6 +77,11 @@ User.prototype['_id'] = undefined;
  * @member {String} userName
  */
 User.prototype['userName'] = undefined;
+
+/**
+ * @member {module:model/UserUserImage} userImage
+ */
+User.prototype['userImage'] = undefined;
 
 
 
