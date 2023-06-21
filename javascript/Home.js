@@ -1,6 +1,25 @@
 let apiUserApi = new TempApi.UserApi();import TempApi from '../src/index';document.getElementById('i1vf6').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/addPatient' ;}};document.getElementById('i6zkl5').onclick = (event) => {
+    {   location.href= '/addPatient' ;}};document.getElementById('ibdfwg').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("ibdfwg")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/userInfo/' + transitionId;}};document.getElementById('i6zkl5').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -19,7 +38,26 @@ let apiUserApi = new TempApi.UserApi();import TempApi from '../src/index';docume
           parentId = key;
         }
       });
-     location.href= '/updatePatient/' + transitionId;}};document.getElementById('if4cx9').onclick = (event) => {
+     location.href= '/updatePatient/' + transitionId;}};document.getElementById('iljn9j').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("iljn9j")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/userInfo/' + transitionId;}};document.getElementById('if4cx9').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);

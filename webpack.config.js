@@ -5,6 +5,7 @@ module.exports = {
 	'Home' : './javascript/Home.js',
 	'addPatient' : './javascript/addPatient.js',
 	'updatePatient' : './javascript/updatePatient.js',
+	'userInfo' : './javascript/userInfo.js',
 },
   output: {
     path: path.resolve(__dirname, 'dist'),
